@@ -1,0 +1,29 @@
+@use '../variables' as vars
+
+.bar
+    position: fixed
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0
+    gap: 2rem
+    bottom: 0rem
+    left: 1rem
+
+    .icon
+        list-style: none
+        transition-duration: 300ms
+        transform: scale(1.4)
+
+        &:hover
+            transform: scale(1.6)
+
+        .link
+            &:hover
+                color: vars.$accent-color
+
+    .line
+        background: vars.$primary-text-color
+        height: 6rem
+        width: 0.1rem
+        list-style: none

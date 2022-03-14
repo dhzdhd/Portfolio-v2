@@ -2,7 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header'
+import SocialsBar from '../components/socials_bar'
 import styles from '../styles/Home.module.sass'
+
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +15,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Header />
+        <SocialsBar />
+        <div>
+
+        </div>
       </div>
     </>
   )
