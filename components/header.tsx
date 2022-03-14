@@ -6,7 +6,7 @@ function Header() {
             <div>Icon here</div>
             <nav>
                 <ul className={styles.nav}>
-                    <li className={styles.element}>j</li>
+                    <li className={styles.element}>Links here</li>
                 </ul>
             </nav>
         </header>
