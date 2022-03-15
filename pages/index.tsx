@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <section className={styles.landing}>
+        <section id="landing" className={styles.landing}>
           <h1 className={styles.h1}>Hi, my name is</h1>
           <h2 className={styles.h2}>dhzdhd</h2>
           <h3 className={styles.h3}>I build multiplatform apps.</h3>

@@ -12,7 +12,6 @@
     .h1
         @include vars.font("md")
         color: vars.$accent-color
-        margin: 0 auto
 
     .h2, .h3
         @include vars.font("7xl", "bold")
@@ -27,5 +26,10 @@
         max-width: 35rem
 
     @media screen and (max-width: vars.calc-size("lg"))
+        padding: 0 5rem
+
         .h2, .h3
             font-size: clamp(2rem, 5vw + 1rem, 4.5rem)
+
+    @media screen and ( max-width: vars.calc-size("md"))
+        padding: 0 2rem

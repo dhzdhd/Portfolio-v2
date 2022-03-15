@@ -8,9 +8,10 @@ import styles from '../styles/Layout.module.sass';
 const Layout: NextPage = ({ children }: any) =>{
     return (
         <div className={styles.layout}>
+            <a className={styles.a11y_link} href="#landing">Jump to main</a>
             <Header />
             <main>
-                <Home />
+                {children}
             </main>
             <Footer />
         </div>
