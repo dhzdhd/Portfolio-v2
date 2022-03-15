@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <div>
         <SocialsBar />
-        <div>
+        <div className={styles.landing}>
 
         </div>
       </div>
