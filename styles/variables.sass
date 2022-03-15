@@ -7,9 +7,28 @@ $primary-dark-text-color: #ccd6f6
 $secondary-dark-text-color: #8892b0
 $scrollbar-dark-color: #495670
 
-$font-sizes: ( "sm": (0.875rem, 1.25rem), "md": (1rem, 1.5rem), "lg": (1.125rem, 1.75rem), "xl": (1.25rem, 1.75rem), "2xl": (1.5rem, 2rem), "3xl": (1.875rem, 2.25rem), "4xl": (2.25rem, 2.5rem), "5xl": (3rem, 1))
+$font-sizes: ( "sm": (0.875rem, 1.25rem), "md": (1rem, 1.5rem), "lg": (1.125rem, 1.75rem), "xl": (1.25rem, 1.75rem), "2xl": (1.5rem, 2rem), "3xl": (1.875rem, 2.25rem), "4xl": (2.25rem, 2.5rem), "5xl": (3rem, 1), "6xl": (3.75rem, 1), "7xl": (4.5rem, 1), "8xl": (6rem, 1), "9xl": (8rem, 1))
 
-@mixin font($type)
+@mixin font($type, $weight: "normal")
     $value: map.get($font-sizes, $type)
     font-size: list.nth($value, 1)
     line-height: list.nth($value, 2)
+
+    @if $weight == "bold"
+        font-weight: bold
+    @else if $weight == "normal"
+        font-weight: normal
+    @else if $weight == "light"
+        font-weight: lighter
+
+@function calc-size($type)
+    @if $type == "sm"
+        @return 640px
+    @else if $type == "md"
+        @return 768px
+    @else if $type == "lg"
+        @return 1024px
+    @else if $type == "xl"
+        @return 1280px
+    @else if $type == "2xl"
+        @return 1536px

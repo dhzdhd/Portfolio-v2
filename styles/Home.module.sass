@@ -4,5 +4,28 @@
     min-height: 100vh
     display: flex
     flex-direction: column
-    align-items: center
+    align-items: flex-start
     justify-content: center
+    padding: 0 9rem
+    gap: 1rem
+
+    .h1
+        @include vars.font("md")
+        color: vars.$accent-color
+        margin: 0 auto
+
+    .h2, .h3
+        @include vars.font("7xl", "bold")
+
+    .h3
+        color: vars.$secondary-dark-text-color
+
+    .p
+        @include vars.font("lg")
+        margin-top: 1rem
+        color: vars.$secondary-dark-text-color
+        max-width: 35rem
+
+    @media screen and (max-width: vars.calc-size("lg"))
+        .h2, .h3
+            font-size: clamp(2rem, 5vw + 1rem, 4.5rem)
