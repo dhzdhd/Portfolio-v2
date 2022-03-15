@@ -15,9 +15,11 @@ const Home: NextPage = () => {
       </Head>
       <div>
         <SocialsBar />
-        <div className={styles.landing}>
-
-        </div>
+        <section className={styles.landing}>
+          <span>Hi, my name is</span>
+          <h1>dhzdhd</h1>
+          <h2>I build multiplatform apps</h2>
+        </section>
       </div>
     </>
   )
