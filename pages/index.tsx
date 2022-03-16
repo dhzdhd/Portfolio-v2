@@ -6,6 +6,8 @@ import SocialsBar from '../components/socials_bar'
 import styles from '../styles/Home.module.sass'
 
 const Home: NextPage = () => {
+  const navbar = <Navbar />
+
   return (
     <>
       <Head>
@@ -21,10 +23,11 @@ const Home: NextPage = () => {
         <p className={styles.p}>I&apos;m a Data Science undergraduate student who has an interest in developing web, desktop and mobile apps using various frameworks and languages.</p>
         </div>
       </section>
+
       <section id="about-me" className={styles.about}>
 
       </section>
-      <Navbar />
+      {navbar}
       <SocialsBar />
     </>
   )
