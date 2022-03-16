@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Navbar from '../components/navbar'
 import SocialsBar from '../components/socials_bar'
 import styles from '../styles/Home.module.sass'
-
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +21,10 @@ const Home: NextPage = () => {
         <p className={styles.p}>I&apos;m a Data Science undergraduate student who has an interest in developing web, desktop and mobile apps using various frameworks and languages.</p>
         </div>
       </section>
+      <section id="about-me" className={styles.about}>
+
+      </section>
+      <Navbar />
       <SocialsBar />
     </>
   )
