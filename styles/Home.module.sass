@@ -4,32 +4,37 @@
     min-height: 100vh
     display: flex
     flex-direction: column
-    align-items: flex-start
+    align-items: center
     justify-content: center
     padding: 0 9rem
     gap: 1rem
 
-    .h1
-        @include vars.font("md")
-        color: vars.$accent-color
+    .content
+        display: flex
+        flex-direction: column
 
-    .h2, .h3
-        @include vars.font("7xl", "bold")
+        .h1
+            @include vars.font("md")
+            color: vars.$accent-color
 
-    .h3
-        color: vars.$secondary-dark-text-color
+        .h2, .h3
+            @include vars.font("7xl", "bold")
 
-    .p
-        @include vars.font("lg")
-        margin-top: 1rem
-        color: vars.$secondary-dark-text-color
-        max-width: 35rem
+        .h3
+            color: vars.$secondary-dark-text-color
+
+        .p
+            @include vars.font("lg")
+            margin-top: 1rem
+            color: vars.$secondary-dark-text-color
+            max-width: 35rem
 
     @media screen and (max-width: vars.calc-size("lg"))
         padding: 0 5rem
 
-        .h2, .h3
-            font-size: clamp(2rem, 5vw + 1rem, 4.5rem)
+        .content
+            .h2, .h3
+                font-size: clamp(2rem, 5vw + 1rem, 4.5rem)
 
     @media screen and ( max-width: vars.calc-size("md"))
         padding: 0 2rem
