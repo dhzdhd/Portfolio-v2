@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { TextureLoader } from 'three';
 import styles from '../styles/components/Header.module.sass';
 
@@ -18,8 +18,24 @@ function Sphere(props: JSX.IntrinsicElements['mesh']) {
 }
 
 function Header() {
+    const [visible, setVisible] = useState(false);
+
+    const listenScrollEvent = (_: any) => {
+        if (window.scrollY > 20) {
+            setVisible(true);
+        } else {
+            setVisible(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', listenScrollEvent)
+        return () => window.removeEventListener('scroll', listenScrollEvent);
+    }, []);
+
     return (
-        <header className={styles.header}>
+        <header style={{boxShadow: `0 ${visible ? '1px 10px' : '0px 0px'} black`}}
+        className={styles.header}>
             <div className={styles.canvas}>
                 <Canvas>
                     <ambientLight />
