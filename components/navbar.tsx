@@ -28,7 +28,7 @@ const Navbar = () => {
 
 
     return (
-        <nav style={{'display': visible ? 'flex': 'none'}}
+        <nav style={{'display': visible ? 'none': 'none'}}
         className={styles.nav}>
             <ul>
                 <li className={styles.element}>

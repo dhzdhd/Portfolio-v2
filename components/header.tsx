@@ -1,6 +1,5 @@
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { useEffect, useRef, useState } from 'react';
-import { TextureLoader } from 'three';
 import styles from '../styles/components/Header.module.sass';
 
 function Sphere(props: JSX.IntrinsicElements['mesh']) {
@@ -34,7 +33,7 @@ function Header() {
     }, []);
 
     return (
-        <header style={{boxShadow: `0 ${visible ? '1px 10px' : '0px 0px'} black`}}
+        <header style={{boxShadow: `0 ${visible ? '1px 3px' : '0px 0px'} black`}}
         className={styles.header}>
             <div className={styles.canvas}>
                 <Canvas>
@@ -45,7 +44,8 @@ function Header() {
             </div>
             <nav>
                 <ul className={styles.nav}>
-                    <li className={styles.element}>Links here</li>
+                    <li className={styles.element}><a href="#hero">Home</a></li>
+                    <li className={styles.element}><a href="">Blog</a></li>
                 </ul>
             </nav>
         </header>

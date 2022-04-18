@@ -22,5 +22,38 @@
         flex-direction: row
         gap: 2rem
 
+        @keyframes fadeInUp
+            0%
+                opacity: 0
+                transform: translateY(100px * 2)
+
+            100%
+                opacity: 1
+                transform: translateY(0)
+
         .element
+
             list-style: none
+            position: relative
+            display: inline-block
+            animation-name: fadeInUp
+            animation-iteration-count: infinite
+
+            &:after
+                content: ''
+                position: absolute
+                width: 100%
+                transform: scaleX(0)
+                height: 0.1rem
+                bottom: 0
+                left: 0
+                background-color: vars.$accent-color
+                transform-origin: bottom right
+                transition: transform 0.25s ease-out
+
+            &:hover:after
+                transform: scaleX(1)
+                transform-origin: bottom left
+
+            &:hover
+                color: vars.$accent-color

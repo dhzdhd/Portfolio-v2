@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <meta name="description" content="My personal portfolio site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section id="landing" className={styles.landing}>
+      <section id="hero" className={styles.landing}>
         <div className={styles.content}>
           <h1 className={styles.h1}>Hi, my name is</h1>
           <h2 className={styles.h2}>dhzdhd</h2>
